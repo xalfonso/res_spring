@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!-- add component scan -->
+    <context:component-scan base-package="eas.com.spring"/>
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:data.properties</value>
+                <!-- Other properties -->
+            </list>
+        </property>
+      <!--  <property name="properties">  key / Value in the same xml. This can be for default value and the file for override
+                <value>file.description=Alfonso</value>
+        </property> -->
+    </bean>
+</beans>
