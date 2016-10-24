@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Import other xml configuration-->
+    <import resource="sub-context.xml"/>
+
+    <!-- Properties File-->
+    <context:property-placeholder location="classpath:data.properties"/>
+
+    <!-- bean of applications -->
+    <bean id="fileInput" class="eas.com.spring.FileInput">
+
+        <!-- setter injection -->
+        <property name="name" value="exampleFile.exe"></property>
+
+
+        <!-- Load form properties file-->
+        <property name="description" value="${file.description}"/>
+
+
+        <!-- This bean defined in other file that is loaded as other context -->
+        <property name="fileEncoder" ref="encoder"/>
+    </bean>
+
+
+    <bean id="step" class="eas.com.spring.FileInputStep" init-method="init" destroy-method="destroy">
+
+        <!-- constructor injection -->
+        <constructor-arg name="name" value="stepFileInput"/>
+        <constructor-arg name="fileInput" ref="fileInput"/>
+        <constructor-arg name="separatorContentFile" ref="separator"/>
+    </bean>
+</beans>
