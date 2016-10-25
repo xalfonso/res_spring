@@ -1,16 +1,21 @@
 package eas.com.spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
  * Created by eduardo on 10/24/2016.
  */
-@Component
+@Component("file")
 public class FileInput {
     @Value("exampleFile.exe")
     private String name;
-    private FileEncoder fileEncoder;
+
+    @Autowired
+    @Qualifier("fileEncoderISO")
+    private FileEncoderInterface fileEncoderInterface;
 
     @Value("${file.description}")
     private String description;
@@ -39,11 +44,12 @@ public class FileInput {
         this.name = name;
     }
 
-    public FileEncoder getFileEncoder() {
-        return fileEncoder;
+    public FileEncoderInterface getFileEncoder() {
+        return fileEncoderInterface;
     }
 
+
     public void setFileEncoder(FileEncoder fileEncoder) {
-        this.fileEncoder = fileEncoder;
+        this.fileEncoderInterface = fileEncoder;
     }
 }

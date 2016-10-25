@@ -1,8 +1,11 @@
 package eas.com.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -22,7 +25,7 @@ public class FileInputStep extends ComponentStep {
     }
 
     @Autowired
-    public FileInputStep(FileInput fileInput, SeparatorContentFile separatorContentFile) {
+    public FileInputStep(@Qualifier("file")FileInput fileInput, SeparatorContentFile separatorContentFile) {
         super("EmptyFileInputStep");
         this.fileInput = fileInput;
         this.separatorContentFile = separatorContentFile;
@@ -32,11 +35,14 @@ public class FileInputStep extends ComponentStep {
         super("EmptyFileInputStep");
     }
 
+
+    @PostConstruct
     public void init(){
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
         System.out.println("Init method FileInputStep" + ". Time: "+ sdf.format(new Date()));
     }
 
+    @PreDestroy
     public void destroy(){
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
         System.out.println("Destroy method FileInputStep" + ". Time: "+ sdf.format(new Date()));
