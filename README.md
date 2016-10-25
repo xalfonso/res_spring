@@ -11,5 +11,5 @@
    1. Dependencies:
    org.springframework > spring-context > 4.3.3.RELEASE
    2. Tips:
-   Annotation context configuration, configure for scanning package from xml file, constructor injection, setter injection, use of properties file for inject value, init and destroy method bean.
+   Annotation context configuration with XML context configuration, configure for scanning package from xml file, constructor injection, setter injection, use of properties file for inject value, init and destroy method bean.
    Use of @Component, @Value, @Autowired, @Qualifier, @PostConstruct, @PreDestroy.
