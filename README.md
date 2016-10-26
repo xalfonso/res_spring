@@ -1,7 +1,7 @@
 # res_spring. Research in Spring framework
 
 ###1. Projects
- * SpringGEA
+ * SpringGea
    1. Dependencies:
    org.springframework > spring-context > 4.3.3.RELEASE
    2. Tips:
@@ -19,3 +19,10 @@
    2. Tips:
    Java configuration with annotation configuration, configure for scanning package from java class, constructor injection, setter injection, use of properties file for inject value (Configure from java class), init and destroy method bean.
    Use of @Component, @Value, @Autowired, @Qualifier, @PostConstruct, @PreDestroy
+* SpringRea
+   1. Dependencies:
+   org.springframework > spring-context > 4.3.3.RELEASE
+   2. Tips:
+   Tips: Java configuration, configure for scanning package from java class, constructor injection, setter injection,
+        use of properties file for inject value (Configure from java class), init and destroy method bean.
+        Use of @Value, @PostConstruct, @PreDestroy.
