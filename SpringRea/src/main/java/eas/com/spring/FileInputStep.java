@@ -1,7 +1,5 @@
 package eas.com.spring;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -22,8 +20,8 @@ public class FileInputStep extends ComponentStep {
         this.separatorContentFile = separatorContentFile;
     }
 
-    @Autowired
-    public FileInputStep(@Qualifier("file")FileInput fileInput, SeparatorContentFile separatorContentFile) {
+
+    public FileInputStep(FileInput fileInput, SeparatorContentFile separatorContentFile) {
         super("EmptyFileInputStep");
         this.fileInput = fileInput;
         this.separatorContentFile = separatorContentFile;

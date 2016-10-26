@@ -10,7 +10,7 @@
     <description>
         Tips: Java configuration, configure for scanning package from java class, constructor injection, setter injection,
         use of properties file for inject value (Configure from java class), init and destroy method bean.
-        Use of @Component, @Value, @Autowired, @Qualifier, @PostConstruct, @PreDestroy.
+        Use of @Value, @PostConstruct, @PreDestroy.
     </description>
 
     <properties>
