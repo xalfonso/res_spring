@@ -7,11 +7,10 @@
     <groupId>eas.com</groupId>
     <artifactId>spring-urano</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <description>
-        Spring basic with annotation configuration. This example is inspired in an Udemy Course
+    <description>        
         Tips: Annotation context configuration with Xml context configuration, configure for scanning package from xml file, constructor injection, setter injection,
         use of properties file for inject value, init and destroy method bean. Use of @Component, @Value, @Autowired, @Qualifier, @PostConstruct,
-        @PreDestroy,
+        @PreDestroy.
     </description>
 
     <properties>

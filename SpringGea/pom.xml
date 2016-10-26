@@ -7,8 +7,7 @@
     <groupId>eas.com</groupId>
     <artifactId>spring-gea</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <description>
-        Spring basic with xml configuration. This example is inspired in the course of Udemy Course
+    <description>        
         Tips: Xml context configuration, read data from properties file in xml context, import one xml context in other,
         load several xml context, constructor injection, setter injection, init and destroy method bean
     </description>
