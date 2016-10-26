@@ -4,15 +4,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created by eduardo on 10/22/2016.
+ * Created by eduardo on 10/22/2016. eddie.alfonso@gmail.com
  */
-public class FileInputStep extends ComponentStep {
+public class FileInputStep {
 
-    protected FileInput fileInput;
-    protected SeparatorContentFile separatorContentFile;
+    private String name;
+    private FileInput fileInput;
+    private SeparatorContentFile separatorContentFile;
 
     public FileInputStep(String name, FileInput fileInput, SeparatorContentFile separatorContentFile) {
-        super(name);
+        this.name = name;
         this.fileInput = fileInput;
         this.separatorContentFile = separatorContentFile;
     }
@@ -31,15 +32,11 @@ public class FileInputStep extends ComponentStep {
         return fileInput;
     }
 
-    public void setFileInput(FileInput fileInput) {
-        this.fileInput = fileInput;
-    }
-
     public SeparatorContentFile getSeparatorContentFile() {
         return separatorContentFile;
     }
 
-    public void setSeparatorContentFile(SeparatorContentFile separatorContentFile) {
-        this.separatorContentFile = separatorContentFile;
+    public String getName() {
+        return name;
     }
 }

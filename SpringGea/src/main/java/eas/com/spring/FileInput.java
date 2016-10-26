@@ -1,7 +1,7 @@
 package eas.com.spring;
 
 /**
- * Created by eduardo on 10/22/2016.
+ * Created by eduardo on 10/22/2016. eddie.alfonso@gmail.com
  */
 public class FileInput {
     private String name;

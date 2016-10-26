@@ -32,7 +32,5 @@ public class App {
 
         //Close the container
         classPathXmlApplicationContext.close();
-
-
     }
 }

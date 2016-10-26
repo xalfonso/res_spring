@@ -14,12 +14,10 @@
     <bean id="fileInput" class="eas.com.spring.FileInput">
 
         <!-- setter injection -->
-        <property name="name" value="exampleFile.exe"></property>
-
+        <property name="name" value="exampleFile.exe"/>
 
         <!-- Load form properties file-->
         <property name="description" value="${file.description}"/>
-
 
         <!-- This bean defined in other file that is loaded as other context -->
         <property name="fileEncoder" ref="encoder"/>
@@ -27,7 +25,6 @@
 
 
     <bean id="step" class="eas.com.spring.FileInputStep" init-method="init" destroy-method="destroy">
-
         <!-- constructor injection -->
         <constructor-arg name="name" value="stepFileInput"/>
         <constructor-arg name="fileInput" ref="fileInput"/>
