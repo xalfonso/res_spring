@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SpringJapeto:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="spring-japeto-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="SpringJapeto:war exploded" />
+    </root>
+  </artifact>
+</component>
