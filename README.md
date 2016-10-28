@@ -34,3 +34,4 @@
         Application with different modules, each module have own xml configuration, test, and source code.
         Each module have a same structure: web, facade, service, dao. The web package contain the Interface for the front End Client.
         The facade package contain the interface for other module that want use functions of this module.
+        Load the list of value from file properties, for inject into Map in one controller
