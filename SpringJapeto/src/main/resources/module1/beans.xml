@@ -6,8 +6,14 @@
 
     <!-- Beans of Comun  -->
 
+    <!-- Facade -->
+    <bean class="eas.com.module1.facade.impl.Module1FacadeImpl">
+        <constructor-arg name="streeService" ref="streeService"/>
+    </bean>
+
+
     <!-- Services -->
-    <bean class="eas.com.module1.service.StreeService">
+    <bean class="eas.com.module1.service.StreeService" id="streeService">
 
         <constructor-arg name="streeDao" ref="streeDao"/>
     </bean>

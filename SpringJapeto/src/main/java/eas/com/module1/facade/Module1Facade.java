@@ -6,4 +6,5 @@ package eas.com.module1.facade;
  * The facade of the module. This serves all functions of this module
  */
 public interface Module1Facade {
+    String stree();
 }

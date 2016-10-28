@@ -1,5 +1,6 @@
 package eas.com.module1.web.controller.impl;
 
+import eas.com.module1.facade.Module1Facade;
 import eas.com.module1.service.StreeService;
 import eas.com.module1.web.controller.StreeController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,15 +17,15 @@ public class StreeControllerImpl implements StreeController{
 
     private final static Logger LOGGER = Logger.getLogger(StreeControllerImpl.class.getName());
 
-    private StreeService streeService;
+    private Module1Facade module1Facade;
 
     @Autowired
-    public StreeControllerImpl(StreeService streeService) {
-        this.streeService = streeService;
+    public StreeControllerImpl(Module1Facade module1Facade) {
+        this.module1Facade = module1Facade;
     }
 
     public String initAction() {
-        return getPage(this.streeService.stree());
+        return getPage(this.module1Facade.stree());
     }
 
     public String listAction() {

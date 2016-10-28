@@ -1,11 +1,17 @@
 package eas.com.common.web.controller.impl;
 
 
+import eas.com.common.entity.Student;
+import eas.com.common.facade.CommonFacade;
 import eas.com.common.service.HomeService;
 import eas.com.common.web.controller.HomeController;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -17,17 +23,22 @@ public class HomeControllerImpl implements HomeController {
 
     private final static Logger LOGGER = Logger.getLogger(HomeControllerImpl.class.getName());
 
-    private HomeService homeService;
+    private CommonFacade commonFacade;
+
+    @Value("#{countries}")
+    private Map<String, String> countries;
 
 
     @Autowired
-    public HomeControllerImpl(HomeService homeService) {
-        this.homeService = homeService;
+    public HomeControllerImpl(CommonFacade commonFacade) {
+        this.commonFacade = commonFacade;
     }
 
-    public String initAction() {
+    public String initAction(Model model) {
         LOGGER.log(Level.INFO, "Acceding to initAction method");
-        return getPage(this.homeService.home());
+        model.addAttribute("student", new Student());
+        model.addAttribute("countries", this.countries);
+        return getPage(this.commonFacade.home());
     }
 
     public String listAction() {

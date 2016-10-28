@@ -1,5 +1,6 @@
 package eas.com.common.web.controller;
 
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface HomeController extends CommonController{
 
     @RequestMapping(method = RequestMethod.GET)
-    String initAction();
+    String initAction(Model model);
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     String listAction();

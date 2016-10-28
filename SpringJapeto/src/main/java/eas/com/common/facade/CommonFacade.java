@@ -5,5 +5,8 @@ package eas.com.common.facade;
  *
  * The facade of the module. This serves all functions of this module
  */
-public interface ComunFacade {
+public interface CommonFacade {
+
+    String home();
+
 }
