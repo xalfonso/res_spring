@@ -64,19 +64,58 @@ public class SystemServiceTrace {
     /**
      *  Execute after returning the method intercepted
      *
-     *  In this case only one method is executed: insert(string)
-     *  because I specified the parameters: args(value). 
+     *  In this case, only one method is executed: insert(string)
+     *  because I specified the parameters: args(value) of type String.
+     *  For Example, one method of the same name with one parameter of type Integer will not intercepted
+     *
      *  With args we can restrict the parameter that must have the method to intercept
+     *
      * @param joinPoint
      */
     @AfterReturning(value = "execution(* eas.com.service.TestService.insert(..)) && args(value)",returning = "result")
-    public void insertAfterReturningTraceOneParameter(JoinPoint joinPoint, Object value, Object result){
+    public void insertAfterReturningTraceOneParameter(JoinPoint joinPoint, String value, Object result){
         LOGGER.log(Level.INFO, "(insertAfterReturningTraceOneParameter) @AfterReturning Method  long Description: " + joinPoint.getSignature().toLongString());
         LOGGER.log(Level.INFO, "(insertAfterReturningTraceOneParameter) @AfterReturning Method  Argument 1: " + joinPoint.getArgs()[0].toString());
         LOGGER.log(Level.INFO, "(insertAfterReturningTraceOneParameter) @AfterReturning Method  Argument 1: " + value.toString());
-        LOGGER.log(Level.INFO, "(insertAfterReturningTrace) @AfterReturning Method  Returning Value: " + result.toString());
+        LOGGER.log(Level.INFO, "(insertAfterReturningTraceOneParameter) @AfterReturning Method  Returning Value: " + result.toString());
 
     }
 
 
+
+    /**
+     *  Execute all method that exist inside the eas.com.service
+     * @param joinPoint
+     */
+    @Before(value = "within(eas.com.service.*)")
+    public void allMethodInPackageServiceBefore(JoinPoint joinPoint){
+        LOGGER.log(Level.INFO, "(allMethodInPackageServiceBefore) @Before Method  long Description: " + joinPoint.getSignature().toLongString());
+    }
+
+    /**
+     *  Execute all method that exist inside the eas.com.service and
+     *  have one parameter of String Type
+     * @param joinPoint
+     * @param value
+     */
+    @Before(value = "within(eas.com.service.*) && args(value)")
+    public void allMethodInPackageServiceAndParameterStringBefore(JoinPoint joinPoint, String value){
+        LOGGER.log(Level.INFO, "(allMethodInPackageServiceAndParameterStringBefore) @Before Method  long Description: " + joinPoint.getSignature().toLongString());
+        LOGGER.log(Level.INFO, "(allMethodInPackageServiceAndParameterStringBefore) @Before Method  Argument 1: " + joinPoint.getArgs()[0].toString());
+        LOGGER.log(Level.INFO, "(allMethodInPackageServiceAndParameterStringBefore) @Before Method  Argument 1: " + value.toString());
+
+
+    }
+
+    /**
+     * Execute all method that exist inside the eas.com.service and
+     * have one parameter that the type have the annotation @AnnotationTest
+     *
+     * @param joinPoint
+     */
+   @Before("within(eas.com.service.*) && @args(eas.com.AnnotationTest)")
+    public void methodWithParamWithAnnotation(JoinPoint joinPoint){
+        LOGGER.log(Level.INFO, "(methodWithParamWithAnnotation) @Before Method  long Description: " + joinPoint.getSignature().toLongString());
+        LOGGER.log(Level.INFO, "(methodWithParamWithAnnotation) @Before Method  Argument 1: " + joinPoint.getArgs()[0].toString());
+    }
 }
