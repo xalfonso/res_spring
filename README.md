@@ -37,8 +37,8 @@
         Load the list of value from file properties, for inject into Map in one controller
 * SpringTemis
    1. Main Dependencies:
-   org.springframework > spring-webmvc > 4.3.3.RELEASE
-   org.aspectj > aspectjrt > 1.8.9
+   org.springframework > spring-webmvc > 4.3.3.RELEASE,
+   org.aspectj > aspectjrt > 1.8.9,
    org.aspectj > aspectjweaver > 1.8.9
    2. Tips:
         Web application(Spring MVC), AOP: Use of @Aspect, @Pointcut, @After, @Before, @AfterReturning, execution,
