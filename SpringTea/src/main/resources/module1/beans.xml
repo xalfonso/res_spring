@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <!-- Beans of Comun  -->
+    <util:properties id="data" location="classpath:module1/list.properties" /> 
+
+
+    <!-- Facade -->
+    <bean class="eas.com.module1.facade.impl.Module1FacadeImpl">
+        <constructor-arg name="cityService" ref="cityService"/>
+    </bean>
+
+
+    <!-- Services -->
+    <bean class="eas.com.module1.service.CityService" id="cityService">
+
+        <constructor-arg name="cityDao" ref="cityDao"/>
+    </bean>
+    <!-- Dao -->
+    <bean class="eas.com.module1.dao.CityDao" id="cityDao">
+
+    </bean>
+</beans>
