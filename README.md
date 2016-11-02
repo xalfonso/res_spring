@@ -42,4 +42,14 @@
    org.aspectj > aspectjweaver > 1.8.9
    2. Tips:
         Web application(Spring MVC), AOP: Use of @Aspect, @Pointcut, @After, @Before, @AfterReturning, execution,
-		within, target, bean, @target, @args, @within, @annotation, 
+		within, target, bean, @target, @args, @within, @annotation
+* SpringTea
+   1. Main Dependencies:
+   org.springframework > spring-webmvc > 4.3.3.RELEASE,
+   javax.ws.rs > javax.ws.rs-api > 2.0,
+   org.glassfish.jersey.core > jersey-client > 2.21
+   com.google.code.gson > gson > 2.4
+   2. Tips:
+        Web application(Spring MVC), consume api rest, deserialize json
+		
+		
