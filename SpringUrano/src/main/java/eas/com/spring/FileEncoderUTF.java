@@ -7,11 +7,11 @@ import org.springframework.stereotype.Component;
  * Created by eduardo on 10/24/2016.
  */
 @Component
-public class FileEncoder implements FileEncoderInterface {
+public class FileEncoderUTF implements FileEncoderInterface {
     @Value("UTF-8")
     private String name;
 
-    public FileEncoder() {
+    public FileEncoderUTF() {
     }
 
     public String getName() {

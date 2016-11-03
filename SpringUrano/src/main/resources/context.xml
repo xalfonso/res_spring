@@ -10,14 +10,20 @@
     <context:component-scan base-package="eas.com.spring"/>
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="ignoreResourceNotFound" value="true"/>
         <property name="locations">
             <list>
                 <value>classpath:data.properties</value>
+                <value>classpath:data1.properties</value>
                 <!-- Other properties -->
             </list>
         </property>
-      <!--  <property name="properties">  key / Value in the same xml. This can be for default value and the file for override
-                <value>file.description=Alfonso</value>
-        </property> -->
+        <!-- key / Value in the same xml. it can be useful for default values, The properties (files) above override these -->
+        <property name="properties">
+            <props>
+                <prop key="file.description">Example of description in xml</prop>
+                <prop key="file.name">exampleFile.xml</prop>
+            </props>
+        </property>
     </bean>
 </beans>

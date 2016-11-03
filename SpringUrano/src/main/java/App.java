@@ -21,15 +21,15 @@ public class App {
         FileInputStep fileInputStep = classPathXmlApplicationContext.getBean("fileInputStep", FileInputStep.class);
 
         //Use the bean
-        System.out.println("Step Name: " + fileInputStep.getName() + " Time: " + sdf.format(new Date()));
+        System.out.println("Step Name: " + fileInputStep.getName() + ". Time: " + sdf.format(new Date()));
 
-        System.out.println("Separator: " + fileInputStep.getSeparatorContentFile().getValue() + " Time: " + sdf.format(new Date()));
+        System.out.println("Separator: " + fileInputStep.getSeparatorContentFile().getValue() + ". Time: " + sdf.format(new Date()));
 
         System.out.println("File: " + fileInputStep.getFileInput().getName() + ". Time: " + sdf.format(new Date()));
 
-        System.out.println("File Description: " + fileInputStep.getFileInput().getDescription() + " Time: " + sdf.format(new Date()));
+        System.out.println("File Description: " + fileInputStep.getFileInput().getDescription() + ". Time: " + sdf.format(new Date()));
 
-        System.out.println("File Encoder: " + fileInputStep.getFileInput().getFileEncoder().getName() + " Time: " + sdf.format(new Date()));
+        System.out.println("File Encoder: " + fileInputStep.getFileInput().getFileEncoder().getName() + ". Time: " + sdf.format(new Date()));
 
 
         //Close the container

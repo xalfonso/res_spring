@@ -10,12 +10,12 @@ import org.springframework.stereotype.Component;
  */
 @Component("file")
 public class FileInput {
-    @Value("exampleFile.exe")
+    @Value("${file.name}")
     private String name;
 
     @Autowired
     @Qualifier("fileEncoderISO")
-    private FileEncoderInterface fileEncoderInterface;
+    private FileEncoderInterface fileEncoder;
 
     @Value("${file.description}")
     private String description;
@@ -45,11 +45,11 @@ public class FileInput {
     }
 
     public FileEncoderInterface getFileEncoder() {
-        return fileEncoderInterface;
+        return this.fileEncoder;
     }
 
 
-    public void setFileEncoder(FileEncoder fileEncoder) {
-        this.fileEncoderInterface = fileEncoder;
+    public void setFileEncoder(FileEncoderInterface fileEncoder) {
+        this.fileEncoder = fileEncoder;
     }
 }

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-514.5" y="75.0">eas.com.spring.SeparatorContentFile</node>
+    <node x="-40.5" y="75.0">eas.com.spring.FileEncoderInterface</node>
+    <node x="-270.5" y="77.0">eas.com.spring.FileInput</node>
+    <node x="-392.5" y="-74.0">eas.com.spring.FileInputStep</node>
+    <node x="-136.5" y="215.0">eas.com.spring.FileEncoderISO</node>
+    <node x="95.5" y="215.0">eas.com.spring.FileEncoderUTF</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="eas.com.spring.FileInputStep" target="eas.com.spring.SeparatorContentFile">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="eas.com.spring.FileInput" target="eas.com.spring.FileEncoderInterface">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="eas.com.spring.FileEncoderISO" target="eas.com.spring.FileEncoderInterface">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="eas.com.spring.FileEncoderUTF" target="eas.com.spring.FileEncoderInterface">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="eas.com.spring.FileInputStep" target="eas.com.spring.FileInput">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="-17.0" y="148.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -13,39 +13,29 @@ import java.util.Date;
  * Created by eduardo on 10/24/2016.
  */
 @Component
-public class FileInputStep extends ComponentStep {
+public class FileInputStep {
 
-    protected FileInput fileInput;
-    protected SeparatorContentFile separatorContentFile;
-
-    public FileInputStep(String name, FileInput fileInput, SeparatorContentFile separatorContentFile) {
-        super(name);
-        this.fileInput = fileInput;
-        this.separatorContentFile = separatorContentFile;
-    }
+    private String name;
+    private FileInput fileInput;
+    private SeparatorContentFile separatorContentFile;
 
     @Autowired
-    public FileInputStep(@Qualifier("file")FileInput fileInput, SeparatorContentFile separatorContentFile) {
-        super("EmptyFileInputStep");
+    public FileInputStep(@Qualifier("file") FileInput fileInput, SeparatorContentFile separatorContentFile) {
+        this.name = "EmptyFileInputStep";
         this.fileInput = fileInput;
         this.separatorContentFile = separatorContentFile;
     }
 
-    public FileInputStep() {
-        super("EmptyFileInputStep");
-    }
-
-
     @PostConstruct
-    public void init(){
+    public void init() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
-        System.out.println("Init method FileInputStep" + ". Time: "+ sdf.format(new Date()));
+        System.out.println("Init method FileInputStep" + ". Time: " + sdf.format(new Date()));
     }
 
     @PreDestroy
-    public void destroy(){
+    public void destroy() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
-        System.out.println("Destroy method FileInputStep" + ". Time: "+ sdf.format(new Date()));
+        System.out.println("Destroy method FileInputStep" + ". Time: " + sdf.format(new Date()));
     }
 
     public FileInput getFileInput() {
@@ -62,5 +52,13 @@ public class FileInputStep extends ComponentStep {
 
     public void setSeparatorContentFile(SeparatorContentFile separatorContentFile) {
         this.separatorContentFile = separatorContentFile;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
