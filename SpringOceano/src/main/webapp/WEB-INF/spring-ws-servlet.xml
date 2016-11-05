@@ -7,7 +7,14 @@
     <context:component-scan base-package="eas.com"/>
     <sws:annotation-driven/>
 
-    <sws:dynamic-wsdl  id="holiday" portTypeName="HumanResource" locationUri="/holidayService/" targetNamespace="http://eas.com/hr/definitions">
+    <!-- URL of wsdl: http://localhost:8080/holidayService/holiday.wsdl
+    id: represent the name of the wsdl [holiday.wsdl]
+    locationUri: represent the part of url: [see the complete url]
+    <sws:xsd location: represent the schema that must exist before create this file
+    -->
+    <sws:dynamic-wsdl  id="holiday" portTypeName="HumanResource" locationUri="/holidayService/" targetNamespace="http://eas.com/hr/definitions" >
         <sws:xsd location="/WEB-INF/hr.xsd"/>
     </sws:dynamic-wsdl>
+
+
 </beans>

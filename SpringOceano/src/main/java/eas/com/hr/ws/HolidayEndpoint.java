@@ -4,6 +4,7 @@ package eas.com.hr.ws;
  * Created by eduardo on 10/30/2016.
  */
 
+
 import eas.com.hr.service.HumanResourceService;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
@@ -38,6 +39,7 @@ public class HolidayEndpoint {
     private XPathExpression<Element> lastNameExpression;
 
     private HumanResourceService humanResourceService;
+
 
     @Autowired
     public HolidayEndpoint(HumanResourceService humanResourceService) throws JDOMException {
