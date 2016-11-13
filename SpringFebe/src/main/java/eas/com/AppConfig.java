@@ -18,6 +18,14 @@ public class AppConfig {
 
 
     @Bean
+    public FileInput file() {
+        FileInput fileInput = new FileInput(env.getProperty("file.name"), env.getProperty("file.description"));
+        fileInput.setFileEncoderInterface(fileEncoderISO());
+        return fileInput;
+    }
+
+
+    @Bean
     public FileEncoderInterface fileEncoderISO() {
         FileEncoderInterface encoderInterface = new FileEncoderISO("ISO-8859-1");
         return encoderInterface;
@@ -30,15 +38,6 @@ public class AppConfig {
     }
 
 
-    @Bean
-    public FileInput file() {
-        FileInput fileInput = new FileInput(env.getProperty("file.name"), env.getProperty("file.description"));
-        fileInput.setFileEncoderInterface(fileEncoderISO());
-        return fileInput;
-    }
-
-
-    @Bean
     public SeparatorContentFile separatorContentFile() {
         SeparatorContentFile separatorContentFile = new SeparatorContentFile();
         separatorContentFile.setValue("#");

@@ -32,7 +32,6 @@ public class App {
 
         System.out.println("File Encoder: " + fileInputStep.getFileInput().getFileEncoderInterface().getName() + " Time: " + sdf.format(new Date()));
 
-
         //Close the container
         context.close();
 
