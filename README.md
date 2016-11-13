@@ -2,7 +2,7 @@
 
 ###1. Projects
  * SpringGea
-   1. Mian Dependencies:
+   1. Main Dependencies:
    org.springframework > spring-context > 4.3.3.RELEASE
    2. Tips:
    Xml context configuration, read data from properties file in xml context, import one xml context in other, load several xml context, constructor injection, setter injection, init and destroy method bean.
@@ -26,6 +26,11 @@
    Java configuration, configure for scanning package from java class, constructor injection, setter injection,
         use of properties file for inject value (Configure from java class), init and destroy method bean.
         Use of @Value, @PostConstruct, @PreDestroy.
+* SpringFebe
+  1. Main Dependencies
+  org.springframework > spring-context > 4.3.3.RELEASE  
+  2. Tips:
+  Full Java configuration (Without Annotation in the business class and without XML configuration), use of properties file for inject value (Configure from java class), init and destroy method bean, use default destroy method.  
 * SpringJapeto
    1. Main Dependencies:
    org.springframework > spring-webmvc > 4.3.3.RELEASE
