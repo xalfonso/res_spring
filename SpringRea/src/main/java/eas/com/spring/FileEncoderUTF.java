@@ -5,11 +5,11 @@ import org.springframework.beans.factory.annotation.Value;
 /**
  * Created by eduardo on 10/25/2016.
  */
-public class FileEncoder implements FileEncoderInterface {
+public class FileEncoderUTF implements FileEncoderInterface {
     @Value("UTF-8")
     private String name;
 
-    public FileEncoder() {
+    public FileEncoderUTF() {
     }
 
     public String getName() {

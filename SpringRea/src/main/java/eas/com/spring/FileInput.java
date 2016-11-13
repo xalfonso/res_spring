@@ -42,12 +42,11 @@ public class FileInput {
         this.name = name;
     }
 
-    public FileEncoderInterface getFileEncoder() {
+    public FileEncoderInterface getFileEncoderInterface() {
         return fileEncoderInterface;
     }
 
-
-    public void setFileEncoder(FileEncoder fileEncoder) {
-        this.fileEncoderInterface = fileEncoder;
+    public void setFileEncoderInterface(FileEncoderInterface fileEncoderInterface) {
+        this.fileEncoderInterface = fileEncoderInterface;
     }
 }

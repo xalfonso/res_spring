@@ -9,28 +9,24 @@ import java.util.Date;
 /**
  * Created by eduardo on 10/25/2016.
  */
-public class FileInputStep extends ComponentStep {
+public class FileInputStep {
 
-    protected FileInput fileInput;
-    protected SeparatorContentFile separatorContentFile;
+    private String name;
+    private FileInput fileInput;
+    private SeparatorContentFile separatorContentFile;
 
     public FileInputStep(String name, FileInput fileInput, SeparatorContentFile separatorContentFile) {
-        super(name);
+        this.name = name;
         this.fileInput = fileInput;
         this.separatorContentFile = separatorContentFile;
     }
 
 
     public FileInputStep(FileInput fileInput, SeparatorContentFile separatorContentFile) {
-        super("EmptyFileInputStep");
+        this.name = "EmptyFileInputStep";
         this.fileInput = fileInput;
         this.separatorContentFile = separatorContentFile;
     }
-
-    public FileInputStep() {
-        super("EmptyFileInputStep");
-    }
-
 
     @PostConstruct
     public void init(){
@@ -58,5 +54,13 @@ public class FileInputStep extends ComponentStep {
 
     public void setSeparatorContentFile(SeparatorContentFile separatorContentFile) {
         this.separatorContentFile = separatorContentFile;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
  */
 public class FileEncoderISO implements FileEncoderInterface {
 
-    @Value("ISO-I19875")
+    @Value("ISO-8859-1")
     private String name;
 
 

@@ -30,7 +30,7 @@ public class App {
 
         System.out.println("File Description: " + fileInputStep.getFileInput().getDescription() + " Time: " + sdf.format(new Date()));
 
-        System.out.println("File Encoder: " + fileInputStep.getFileInput().getFileEncoder().getName() + " Time: " + sdf.format(new Date()));
+        System.out.println("File Encoder: " + fileInputStep.getFileInput().getFileEncoderInterface().getName() + " Time: " + sdf.format(new Date()));
 
 
         //Close the container
