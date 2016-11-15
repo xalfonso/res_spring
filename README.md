@@ -41,29 +41,39 @@
         Load the list of value from file properties, for inject into Map in one controller
  7. SpringTemis
    1. Main Dependencies:
-   org.springframework > spring-webmvc > 4.3.3.RELEASE,
-   org.aspectj > aspectjrt > 1.8.9,
+   org.springframework > spring-webmvc > 4.3.3.RELEASE;
+   org.aspectj > aspectjrt > 1.8.9;
    org.aspectj > aspectjweaver > 1.8.9
    2. Tips:
         Web application(Spring MVC), AOP: Use of @Aspect, @Pointcut, @After, @Before, @AfterReturning, execution,
 		within, target, bean, @target, @args, @within, @annotation
  8. SpringOceano
    1. Main Dependencies:
-   org.springframework.ws > spring-ws-core > 2.4.0.RELEASE,
-   org.jdom > jdom > 2.0.1,
-   jaxen > jaxen > 2.0.1,
+   org.springframework.ws > spring-ws-core > 2.4.0.RELEASE;
+   org.jdom > jdom > 2.0.1;
+   jaxen > jaxen > 2.0.1;
    wsdl4j > wsdl4j > 1.6.3
    2. Tips:
         Web Service Application: Publish Web Service
  9. SpringTea
    1. Main Dependencies:
-   org.springframework > spring-webmvc > 4.3.3.RELEASE,
-   javax.ws.rs > javax.ws.rs-api > 2.0,
-   org.glassfish.jersey.core > jersey-client > 2.21,
+   org.springframework > spring-webmvc > 4.3.3.RELEASE;
+   javax.ws.rs > javax.ws.rs-api > 2.0;
+   org.glassfish.jersey.core > jersey-client > 2.21;
    com.google.code.gson > gson > 2.4
    2. Tips:
         Web application(Spring MVC), consume api rest, deserialize json
  10. SpringCeo
     1. Main Dependencies:
-		
+    org.springframework > spring-webmvc > 4.3.4.RELEASE;
+    org.springframework > spring-orm > 4.3.4.RELEASE;
+    org.hibernate > hibernate-core > >5.2.4.Final;
+    com.mchange > c3p0 > 0.9.5.2;
+    mysql > mysql-connector-java > 5.1.39;
+    javax.servlet > javax.servlet-api > 3.1.0;
+    javax.servlet.jsp.jstl > jstl-api > 1.2;
+    taglibs > standard > 1.1.2;
+    log4j > log4j > 1.2.17
+    2. Tips:
+         Spring MVC, Hibernate, XML configuration with use of annotation, configure connection pool with c3p0 lib, load different properties file, Example of multi tier application
 		
