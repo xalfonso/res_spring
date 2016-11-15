@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <description>
-        Tips: Spring MVC, Hibernate, XML configuration with use of annotation, configure connection pool with c3p0 lib,
+        Tips: Spring MVC, Hibernate, JPA Annotation,Spring XML configuration with use of annotation, configure connection pool with c3p0 lib,
         load different properties file, Example of multi tier application
 
     </description>
