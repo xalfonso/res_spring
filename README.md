@@ -63,5 +63,7 @@
    com.google.code.gson > gson > 2.4
    2. Tips:
         Web application(Spring MVC), consume api rest, deserialize json
+ 10. SpringCeo
+    1. Main Dependencies:
 		
 		
