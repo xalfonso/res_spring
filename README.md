@@ -75,5 +75,5 @@
     taglibs > standard > 1.1.2;
     log4j > log4j > 1.2.17
     2. Tips:
-         Spring MVC, Hibernate, XML configuration with use of annotation, configure connection pool with c3p0 lib, load different properties file, Example of multi tier application
+         Spring MVC, Hibernate, JPA Annotation,Spring XML configuration with use of annotation, configure connection pool with c3p0 lib, load different properties file, Example of multi tier application
 		
