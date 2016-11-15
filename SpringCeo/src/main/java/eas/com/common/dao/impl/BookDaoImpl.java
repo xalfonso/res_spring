@@ -22,6 +22,6 @@ public class BookDaoImpl implements BookDao {
     }
 
     public List<Book> list() throws Exception {
-        return this.sessionFactory.getCurrentSession().createQuery("FROM " + Book.class.getName()).getResultList();
+        return this.sessionFactory.getCurrentSession().createQuery("FROM " + Book.class.getName(), Book.class).getResultList();
     }
 }
