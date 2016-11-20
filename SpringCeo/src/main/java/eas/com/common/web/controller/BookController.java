@@ -2,8 +2,9 @@ package eas.com.common.web.controller;
 
 import eas.com.common.entity.Book;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Created by eduardo on 11/14/2016.
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value = "/book")
 public interface BookController {
 
-    @RequestMapping(method = RequestMethod.GET)
+    @GetMapping
     String listAction(Model model);
 
     /**
@@ -19,7 +20,7 @@ public interface BookController {
      * @param model model of spring
      * @return page to go
      */
-    @RequestMapping(value = "/insert",  method = RequestMethod.GET)
+    @GetMapping(value = "/insert")
     String insertAction(Model model);
 
     /**
@@ -28,7 +29,7 @@ public interface BookController {
      * @param book book to insert
      * @return page to go
      */
-    @RequestMapping(value = "/insert",  method = RequestMethod.POST)
+    @PostMapping(value = "/insert")
     String insertAction(Model model, Book book);
 
 
