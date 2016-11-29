@@ -1,4 +1,4 @@
-# res_spring. Research in Spring framework
+# res_spring. Research in Spring framework.
 
 ###1. Projects
  1. SpringGea
