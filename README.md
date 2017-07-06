@@ -1,6 +1,6 @@
 # res_spring. Research in Spring framework.
 
-###1. Projects
+Projects
 1. SpringGea
    1. Main Dependencies:
    org.springframework > spring-context > 4.3.3.RELEASE
