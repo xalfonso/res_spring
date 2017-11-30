@@ -76,4 +76,10 @@ Projects
     log4j > log4j > 1.2.17
     2. Tips:
          Spring MVC, Hibernate, JPA Annotation,Spring XML configuration with use of annotation, configure connection pool with c3p0 lib, load different properties file, Example of multi tier application
+11. SpringTetis
+   1. Main Dependencies:
+   org.springframework > spring-core > 4.3.5.RELEASE;
+   org.springframework > spring-context > 4.3.5.RELEASE   
+   2. Tips:
+        Spring Expression Language 
 		
