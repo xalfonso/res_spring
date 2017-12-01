@@ -67,7 +67,7 @@ public class Main {
          * Deberian haber tres:
          * -Descuentos sobre productos : Esto ocaciona que se itere sobre cada producto y se compruebe una condición sobre ese producto o inluso una general pero el
          * descuento se ara sobre cada unos de los productos que cumplan esa condición sin importar la relación con otros productos (El descuento se aplica sobre el producto)
-         * - Descuentos sobre productos teniendo en cuenta la relación con otros productos (El descuento se aplica sobre el producto)
+         * - Descuentos sobre productos teniendo en cuenta la relación con otros productos (El descuento se aplica sobre el producto). Ej: El tercer producto de un tipo, cosas asi.. se deben hacer particiones
          * - Descuentos sobre el total de los productos (El descuento se aplica sobre el total de los productos)
          *
          *
