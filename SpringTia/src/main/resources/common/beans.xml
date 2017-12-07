@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <!-- Beans of Common module  -->
+    <util:properties id="countries" location="classpath:common/list.properties"/>
+
+    <!-- Facade -->
+    <bean class="eas.com.common.facade.impl.CommonFacadeImpl">
+
+        <constructor-arg name="homeService" ref="homeService"/>
+    </bean>
+
+    <!-- Services -->
+    <bean class="eas.com.common.service.HomeService" id="homeService">
+
+        <constructor-arg name="homeDao" ref="homeDao"/>
+    </bean>
+
+    <!-- Dao -->
+    <bean class="eas.com.common.dao.HomeDao" id="homeDao">
+
+    </bean>
+
+</beans>
