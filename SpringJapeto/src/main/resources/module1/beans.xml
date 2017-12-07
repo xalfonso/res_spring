@@ -14,7 +14,6 @@
 
     <!-- Services -->
     <bean class="eas.com.module1.service.StreeService" id="streeService">
-
         <constructor-arg name="streeDao" ref="streeDao"/>
     </bean>
     <!-- Dao -->
