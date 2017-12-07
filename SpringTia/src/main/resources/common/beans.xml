@@ -19,6 +19,9 @@
         <constructor-arg name="homeDao" ref="homeDao"/>
     </bean>
 
+    <!-- Service for test the Scheduled -->
+    <bean class="eas.com.common.service.TaskService" id="taskService"/>
+
     <!-- Dao -->
     <bean class="eas.com.common.dao.HomeDao" id="homeDao">
 

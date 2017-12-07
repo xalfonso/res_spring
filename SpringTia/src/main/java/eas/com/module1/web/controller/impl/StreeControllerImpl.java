@@ -1,10 +1,8 @@
 package eas.com.module1.web.controller.impl;
 
 import eas.com.module1.facade.Module1Facade;
-import eas.com.module1.service.StreeService;
 import eas.com.module1.web.controller.StreeController;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
 import java.util.logging.Logger;
