@@ -83,3 +83,12 @@ Projects
     2. Tips:
          Spring Expression Language 
 		
+12. SpringTia (from SpringJapeto)
+    1. Main Dependencies:
+    org.springframework > spring-webmvc > 4.3.3.RELEASE
+    2. Tips: @Scheduled and @Async method. Example in TaskService.java.
+        With the @Async we can pass parameter and return some value; in this case we need to call the method
+        With the @Scheduled wen cannot pass parameter neither return some value; in this case we do not need call directly the method,
+        the method is called automatically in relation with the expression (cron expression)
+	And the same of SpringJapeto
+  
