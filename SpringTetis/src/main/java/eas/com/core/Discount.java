@@ -4,8 +4,6 @@ import org.springframework.expression.Expression;
 import org.springframework.expression.ExpressionParser;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
 
-import java.util.Map;
-
 public class Discount {
     private Long id;
 
@@ -76,5 +74,15 @@ public class Discount {
 
     public void setDiscountOverSingleProduct(boolean discountOverSingleProduct) {
         this.discountOverSingleProduct = discountOverSingleProduct;
+    }
+
+    @Override
+    public String toString() {
+        return "Discount{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", expression='" + expression + '\'' +
+                ", discountOverSingleProduct=" + discountOverSingleProduct +
+                '}';
     }
 }
