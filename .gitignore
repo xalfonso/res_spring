@@ -1,4 +1,16 @@
 *.class
 */target/*
-.idea
+SpringCeo/.idea/*
+SpringCronos/.idea/*
+SpringFebe/.idea/*
+SpringGea/.idea/*
+spring-hisperon/.idea/*
+SpringJapeto/.idea/*
+SpringOceano/.idea/*
+SpringRea/.idea/*
+SpringTea/.idea/*
+SpringTemis/.idea/*
+SpringTetis/.idea/*
+SpringTia/.idea/*
+SpringUrano/.idea/*
 *.iml
