@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SpringJapeto.iml" filepath="$PROJECT_DIR$/SpringJapeto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-tea.iml" filepath="$PROJECT_DIR$/spring-tea.iml" />
     </modules>
   </component>
 </project>
