@@ -3,7 +3,7 @@ package eas.com.config;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
- * Spring Web Initializer Java Configuration
+ * Spring Servlet Initializer by Java Configuration
  *
  * @author esanchez
  */

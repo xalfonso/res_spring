@@ -1,0 +1,29 @@
+table, td{
+    border: antiquewhite 1px double;
+    border-collapse: collapse;
+}
+
+.formTest, .tableTest{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formTest > label, .leftRow{
+    float: left;
+    clear: both;
+    width: 30%;
+}
+
+.formTest > input{
+    float: right;
+    width: 70%;
+}
+
+#listCheckbox{
+    column-count: 2;
+}
+
+#listCheckbox > span{
+    display: block;
+}
