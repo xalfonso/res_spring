@@ -13,4 +13,7 @@ SpringTemis/.idea/*
 SpringTetis/.idea/*
 SpringTia/.idea/*
 SpringUrano/.idea/*
+spring-mnemosine/.idea/*
 *.iml
+.gradle
+build/
