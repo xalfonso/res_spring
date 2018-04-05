@@ -98,4 +98,12 @@ Projects
     javax.servlet.jsp > javax.servlet.jsp-api > 2.3.1;
     javax.servlet > jstl > 1.2
     2. Tips: Spring MVC, Spring Java Configuration
-  
+14. spring-mnemosine
+    1. Main Dependencies
+    org.springframework > spring-webmvc > 4.3.15.RELEASE;
+    javax.servlet > javax.servlet-api > 4.0.0;
+    com.fasterxml.jackson.core > jackson-cor > 2.8.11
+    com.fasterxml.jackson.core > jackson-annotations > 2.8.11
+    com.fasterxml.jackson.core > jackson-databind > 2.8.11
+    2. Tips: Spring MVC, Api Rest, Spring Java Configuration, AsyncRestTemplate, AsyncRequestCallBack, ResponseExtractor,          
+       ListenableFuture, Future Call Back
