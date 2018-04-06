@@ -12,9 +12,4 @@ public class HomeControllerImpl implements HomeController {
         model.addAttribute("name", "Probando Spring MVC");
         return "home";
     }
-
-    @Override
-    public String goExternalSystemAction(Model model) {
-        return "gatewayToExternalSystem";
-    }
 }

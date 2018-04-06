@@ -10,7 +10,4 @@ public interface HomeController {
 
     @GetMapping
     String homeAction(Model model);
-
-    @GetMapping("gateway")
-    String goExternalSystemAction(Model model);
 }
