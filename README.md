@@ -97,7 +97,7 @@ Projects
     javax.servlet > javax.servlet-api > 4.0.0;
     javax.servlet.jsp > javax.servlet.jsp-api > 2.3.1;
     javax.servlet > jstl > 1.2
-    2. Tips: Spring MVC, Spring Java Configuration
+    2. Tips: Spring MVC, Spring Java Configuration, Call spring-crios project form post form
 14. spring-mnemosine
     1. Main Dependencies
     org.springframework > spring-webmvc > 4.3.15.RELEASE;
@@ -107,3 +107,12 @@ Projects
     com.fasterxml.jackson.core > jackson-databind > 2.8.11
     2. Tips: Spring MVC, Api Rest, Spring Java Configuration, AsyncRestTemplate, AsyncRequestCallBack, ResponseExtractor,          
        ListenableFuture, Future Call Back
+15. spring-crios (from spring-hisperon)
+    1. Main Dependencies
+    org.springframework > spring-webmv > 4.3.15.RELEASE;
+    javax.servlet > javax.servlet-api > 4.0.0;
+    javax.servlet.jsp > javax.servlet.jsp-api > 2.3.1;
+    javax.servlet > jstl > 1.2
+    org.springframework.security > spring-security-config > 4.2.5.RELEASE
+    org.springframework.security > spring-security-web > 4.2.5.RELEASE
+    2. Tips: Spring MVC, Spring Security, Spring Java Configuration
