@@ -97,6 +97,9 @@ Projects
     javax.servlet > javax.servlet-api > 4.0.0;
     javax.servlet.jsp > javax.servlet.jsp-api > 2.3.1;
     javax.servlet > jstl > 1.2
+    com.fasterxml.jackson.core > jackson-cor > 2.8.11
+    com.fasterxml.jackson.core > jackson-annotations > 2.8.11
+    com.fasterxml.jackson.core > jackson-databind > 2.8.11
     jquery > core > 1.12.4
     2. Tips: Spring MVC, Spring Java Configuration, Call spring-crios project from post form, Consume Rest Web Services With JQuery
 14. spring-mnemosine
