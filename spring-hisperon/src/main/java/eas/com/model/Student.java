@@ -1,7 +1,8 @@
 package eas.com.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 /**
@@ -52,6 +53,7 @@ public class Student {
         this.sex = sex;
     }
 
+    @JsonIgnore
     public List<String> getInterest() {
         return interest;
     }

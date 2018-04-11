@@ -4,11 +4,13 @@ import eas.com.config.Views;
 import eas.com.controller.StudentController;
 import eas.com.model.Student;
 import eas.com.service.StudentService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 
 import javax.annotation.Resource;
 import java.util.Arrays;
+import java.util.List;
 
 @Controller
 public class StudentControllerImpl implements StudentController {
@@ -37,5 +39,10 @@ public class StudentControllerImpl implements StudentController {
     public String listAction(Model model) {
         model.addAttribute("students", this.studentService.getStudentList());
         return Views.LIST_STUDENT.url;
+    }
+
+    @Override
+    public ResponseEntity<List<Student>> getAll() {
+        return ResponseEntity.ok(this.studentService.getStudentList());
     }
 }
