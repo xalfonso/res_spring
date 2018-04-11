@@ -1,5 +1,5 @@
 <!-- Header -->
-<%@include file="/WEB-INF/jsp/common/header.jsp" %>
+<%@include file="/WEB-INF/view/common/header.jsp" %>
 <body>
 <!--Custom Content Page -->
 <spring:url value="/student/insert" var="urlInsertStudent"/>
@@ -25,5 +25,5 @@
 
 
 <!-- Footer -->
-<%@include file="/WEB-INF/jsp/common/footer.jsp" %>
+<%@include file="/WEB-INF/view/common/footer.jsp" %>
 </body>

@@ -29,7 +29,12 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 .defaultSuccessUrl("/student")
                 .and()
-                .csrf().disable();
+                .logout()
+                .addLogoutHandler()
+                .logoutSuccessHandler()
+                .and()
+                .csrf().disable()
+
     }
 
 

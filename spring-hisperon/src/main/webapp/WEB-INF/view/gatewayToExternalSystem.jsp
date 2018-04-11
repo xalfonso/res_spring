@@ -1,5 +1,5 @@
 <!-- Header -->
-<%@include file="/WEB-INF/jsp/common/header.jsp"%>
+<%@include file="/WEB-INF/view/common/header.jsp"%>
 
 <body>
  <a onclick="gotoExternalSystem()">Enlace a Sistema Externo</a>

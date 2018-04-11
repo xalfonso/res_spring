@@ -1,5 +1,5 @@
 <!-- Header -->
-<%@include file="/WEB-INF/jsp/common/header.jsp"%>
+<%@include file="/WEB-INF/view/common/header.jsp"%>
 
 <!--Custom Content Page -->
 Variable desde el contrador: ${name}
@@ -8,4 +8,4 @@ Variable desde el contrador: ${name}
 <c:set var="specificsJS" value="home.js,extra.js"/>
 
 <!-- Footer -->
-<%@include file="/WEB-INF/jsp/common/footer.jsp"%>
+<%@include file="/WEB-INF/view/common/footer.jsp"%>
