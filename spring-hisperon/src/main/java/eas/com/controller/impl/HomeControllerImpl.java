@@ -9,7 +9,7 @@ public class HomeControllerImpl implements HomeController {
 
     @Override
     public String homeAction(Model model) {
-        model.addAttribute("name", "Probando Spring MVC");
+        model.addAttribute("name", "Probando llamada a metodo Ajax desde JQuery");
         return "home";
     }
 

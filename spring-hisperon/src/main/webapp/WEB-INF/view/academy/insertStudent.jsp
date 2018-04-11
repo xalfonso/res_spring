@@ -24,18 +24,9 @@
         <f:checkboxes path="interest" items="${interests}" />
     </div>
     <div class="leftRow">
-        <button type="submit">Enviar</button>
-        <button type="button" id="idButtonListStudent">Mostrar Tabla por ajax</button>
-    </div>
-    <div class="leftRow">
-        <table class="tableTest" id="idTableStudentAjax">
-
-        </table>
+      <button type="submit">Enviar</button>
     </div>
 </f:form>
 
-
-<!-- Define custom JavaScript-->
-<c:set var="specificsJS" value="insertStudent.js"/>
 <!-- Footer -->
 <%@include file="/WEB-INF/view/common/footer.jsp" %>

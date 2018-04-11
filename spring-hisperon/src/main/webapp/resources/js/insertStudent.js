@@ -6,8 +6,6 @@ $(document).ready(function () {
         $idButtonListStudent.click(listStudent);
 
     $URL = $('#inp_url_home').val();
-
-    alert("Estamos usando Jquery");
 });
 
 

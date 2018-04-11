@@ -2,10 +2,18 @@
 <%@include file="/WEB-INF/view/common/header.jsp"%>
 
 <!--Custom Content Page -->
-Variable desde el contrador: ${name}
+${name}
+
+
+<button type="button" id="idButtonListStudent">Mostrar Tabla por ajax</button>
+
+<table class="tableTest" id="idTableStudentAjax">
+</table>
+
+
 
 <!-- Define custom JavaScript-->
-<c:set var="specificsJS" value="home.js,extra.js"/>
+<c:set var="specificsJS" value="insertStudent.js"/>
 
 <!-- Footer -->
 <%@include file="/WEB-INF/view/common/footer.jsp"%>
