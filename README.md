@@ -97,7 +97,8 @@ Projects
     javax.servlet > javax.servlet-api > 4.0.0;
     javax.servlet.jsp > javax.servlet.jsp-api > 2.3.1;
     javax.servlet > jstl > 1.2
-    2. Tips: Spring MVC, Spring Java Configuration, Call spring-crios project from post form
+    jquery > core > 1.12.4
+    2. Tips: Spring MVC, Spring Java Configuration, Call spring-crios project from post form, Consume Rest Web Services With JQuery
 14. spring-mnemosine
     1. Main Dependencies
     org.springframework > spring-webmvc > 4.3.15.RELEASE;
