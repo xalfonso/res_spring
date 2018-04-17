@@ -12,7 +12,7 @@ $(document).ready(function () {
 function listStudent() {
     $.ajax({
         type: 'GET',
-        url: $URL + "student/json",
+        url: $URL + "/student/json",
         dataType: 'json',
         success: function (data) {
             console.debug(data);
