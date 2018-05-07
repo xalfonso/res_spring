@@ -15,6 +15,7 @@ SpringTia/.idea/*
 SpringUrano/.idea/*
 spring-mnemosine/.idea/*
 spring-crios/.idea/*
+spring-zeus/.idea/*
 *.iml
 .gradle
 build/
