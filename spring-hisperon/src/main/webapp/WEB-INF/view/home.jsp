@@ -4,12 +4,12 @@
 <!--Custom Content Page -->
 ${name}
 
+jquery.js?v=0.8
 
 <button type="button" id="idButtonListStudent">Mostrar Tabla por ajax</button>
 
 <table class="tableTest" id="idTableStudentAjax">
 </table>
-
 
 
 <!-- Define custom JavaScript-->

@@ -14,17 +14,23 @@ function listStudent() {
         type: 'GET',
         url: $URL + "/student/json",
         dataType: 'json',
+        cache: false,
         success: function (data) {
-            console.debug(data);
-            fillTable(data)
+            fillTable(data);
         },
         error: function (jqXHR, status, error) {
-            console.debug(error);
         },
         complete: function (jqXHR, status) {
-            console.debug(status);
+
         }
     });
+
+}
+
+function fillTableWithJavaScript(data) {
+    var table = window.document.getElementById("idTableStudentAjax");
+    document.write("Ejemplo de datos: " + data);
+
 
 }
 
