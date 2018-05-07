@@ -127,4 +127,4 @@ Projects
     javax.servlet.jsp > javax.servlet.jsp-api > 2.3.1;
     javax.servlet > jstl > 1.2;
     org.webjars.bower > jquery > 3.3.1
-    2. Tips: Spring MVC, WebJar: Use css, js file from jar, in this case, i am using jquery from jar. Using external proyect create by me for store js and css: scanner-common.rar
+    2. Tips: Spring MVC, WebJar: Use css, js file from jar, in this case, i am using jquery from jar. Using external proyect create by me for store js and css: spring-apolo
