@@ -120,3 +120,11 @@ Projects
     org.springframework.security > spring-security-config > 4.2.5.RELEASE;
     org.springframework.security > spring-security-web > 4.2.5.RELEASE
     2. Tips: Spring MVC, Spring Security, Spring Java Configuration
+16. spring-zeus
+    1. Main Dependencies
+    org.springframework > spring-webmv > 4.3.16.RELEASE;
+    javax.servlet > javax.servlet-api > 4.0.0;
+    javax.servlet.jsp > javax.servlet.jsp-api > 2.3.1;
+    javax.servlet > jstl > 1.2;
+    org.webjars.bower > jquery > 3.3.1
+    2. Tips: Spring MVC, WebJar: Use css, js file from jar, in this case, i am using jquery from jar
