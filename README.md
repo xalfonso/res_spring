@@ -128,3 +128,5 @@ Projects
     javax.servlet > jstl > 1.2;
     org.webjars.bower > jquery > 3.3.1
     2. Tips: Spring MVC, WebJar: Use css, js file from jar, in this case, i am using jquery from jar. Using external proyect create by me for store js and css: spring-apolo
+17. spring-apolo
+    1. Tips: Project for contains static file: css and js and be include for other project. This project do not have dependency with spring framework
