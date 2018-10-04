@@ -119,7 +119,7 @@ Projects
     javax.servlet > jstl > 1.2;
     org.springframework.security > spring-security-config > 4.2.5.RELEASE;
     org.springframework.security > spring-security-web > 4.2.5.RELEASE
-    2. Tips: Spring MVC, Spring Security, Spring Java Configuration
+    2. Tips: Spring MVC, Spring Security, Spring Java Configuration. Conditional Authentication for avoid to go the database again
 16. spring-zeus
     1. Main Dependencies
     org.springframework > spring-webmv > 4.3.16.RELEASE;
