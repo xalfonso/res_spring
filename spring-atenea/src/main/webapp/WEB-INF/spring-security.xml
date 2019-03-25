@@ -1,0 +1,92 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/security
+		http://www.springframework.org/schema/security/spring-security.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!-- KeyCloak -->
+
+    <context:component-scan base-package="org.keycloak.adapters.springsecurity"/>
+
+    <authentication-manager alias="authenticationManager">
+        <authentication-provider ref="keycloakAuthenticationProvider"/>
+    </authentication-manager>
+
+    <beans:bean id="adapterDeploymentContext"
+                class="org.keycloak.adapters.springsecurity.AdapterDeploymentContextFactoryBean">
+        <beans:constructor-arg value="/WEB-INF/keycloak.json"/>
+    </beans:bean>
+
+    <beans:bean id="keycloakAuthenticationEntryPoint"
+                class="org.keycloak.adapters.springsecurity.authentication.KeycloakAuthenticationEntryPoint">
+        <beans:constructor-arg ref="adapterDeploymentContext"/>
+    </beans:bean>
+
+    <beans:bean id="grantedAuthoritiesMapper" class="org.springframework.security.core.authority.mapping.SimpleAuthorityMapper">
+        <beans:property name="convertToUpperCase" value="true"/>
+    </beans:bean>
+
+    <beans:bean id="keycloakAuthenticationProvider"
+                class="org.keycloak.adapters.springsecurity.authentication.KeycloakAuthenticationProvider">
+        <beans:property name="grantedAuthoritiesMapper" ref="grantedAuthoritiesMapper"/>
+    </beans:bean>
+
+    <beans:bean id="keycloakPreAuthActionsFilter"
+                class="org.keycloak.adapters.springsecurity.filter.KeycloakPreAuthActionsFilter"/>
+
+    <beans:bean id="keycloakAuthenticationProcessingFilter"
+                class="org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticationProcessingFilter">
+        <beans:constructor-arg name="authenticationManager" ref="authenticationManager"/>
+    </beans:bean>
+
+    <beans:bean id="keycloakLogoutHandler"
+                class="org.keycloak.adapters.springsecurity.authentication.KeycloakLogoutHandler">
+        <beans:constructor-arg ref="adapterDeploymentContext"/>
+    </beans:bean>
+
+    <beans:bean id="logoutFilter" class="org.springframework.security.web.authentication.logout.LogoutFilter">
+        <beans:constructor-arg name="logoutSuccessUrl" value="/"/>
+        <beans:constructor-arg name="handlers">
+            <beans:list>
+                <beans:ref bean="keycloakLogoutHandler"/>
+                <beans:bean
+                        class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler"/>
+            </beans:list>
+        </beans:constructor-arg>
+        <beans:property name="logoutRequestMatcher">
+            <beans:bean class="org.springframework.security.web.util.matcher.AntPathRequestMatcher">
+                <beans:constructor-arg name="pattern" value="/sso/logout**"/>
+                <beans:constructor-arg name="httpMethod" value="GET"/>
+            </beans:bean>
+        </beans:property>
+    </beans:bean>
+
+
+    <!-- END KeyCloak -->
+
+    <http auto-config="false" entry-point-ref="restNotAuthenticationHandler">
+        <custom-filter ref="keycloakPreAuthActionsFilter" before="LOGOUT_FILTER"/>
+        <custom-filter ref="keycloakAuthenticationProcessingFilter" before="FORM_LOGIN_FILTER"/>
+
+        <intercept-url pattern="/student/**" access="hasRole('ROLE_OFFLINE_ACCESS1')"/>
+        <intercept-url pattern="/**" access="authenticated"/>
+        <csrf disabled="true"/>
+        <custom-filter ref="logoutFilter" position="LOGOUT_FILTER" />
+        <form-login authentication-success-handler-ref="restAuthenticationSuccessHandler"
+                    authentication-failure-handler-ref="restAuthenticationFailureHandler"/>
+        <access-denied-handler ref="restAccessDeniedHandler"/>
+    </http>
+
+    <!-- <authentication-manager>
+        <authentication-provider>
+            <user-service>
+                <user name="ealfonso" password="{noop}eduardo" authorities="ROLE_PROGRAMMER, ROLE_DATA_SCIENTIST"/>
+                <user name="lgarzon" password="{noop}leydis" authorities="ROLE_PROGRAMMER, ROLE_WEB_PROGRAMMER"/>
+            </user-service>
+        </authentication-provider>
+    </authentication-manager> -->
+</beans:beans>
