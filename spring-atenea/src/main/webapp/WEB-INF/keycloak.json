@@ -1,0 +1,6 @@
+{
+  "realm": "CFAVORITA-SSO-INTRANET",
+  "auth-server-url": "http://10.200.101.223:8084/auth",
+  "resource": "spring-security-app",
+  "public-client": true
+}
