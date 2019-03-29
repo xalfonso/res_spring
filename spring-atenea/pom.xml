@@ -65,6 +65,23 @@
             <artifactId>keycloak-spring-security-adapter</artifactId>
             <version>4.8.3.Final</version>
         </dependency>
+        <dependency>
+            <groupId>ec.com.kruger</groupId>
+            <artifactId>fwk-utilitario-security-sso-spring-security</artifactId>
+            <version>1.1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
+    <repositories>
+        <repository>
+            <id>nexusKruger</id>
+            <name>nexusKruger</name>
+            <url>http://svr-kruger1:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <repository>
+            <id>nexusKruger1</id>
+            <name>nexusKruger1</name>
+            <url>http://svr-kruger1:8081/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
 </project>
