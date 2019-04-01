@@ -130,3 +130,12 @@ Projects
     2. Tips: Spring MVC, WebJar: Use css, js file from jar, in this case, i am using jquery from jar. Using external proyect create by me for store js and css: spring-apolo
 17. spring-apolo
     1. Tips: Project for contains static file: css and js and be include for other project. This project do not have dependency with spring framework
+18. spring-atenea
+    1. Tips: Rest Aplication with Spring Security and KeyCloak. This project do not have dependency with spring framework
+    2. Main Dependencies
+    org.springframework > spring-webmv > 5.0.12.RELEASE;
+    javax.servlet > javax.servlet-api > 4.0.1;
+    com.fasterxml.jackson.core > jackson-databind > 2.9.6;
+    org.springframework.security > spring-security-web > 5.0.11;
+    org.springframework.security > spring-security-config > 5.0.11;
+    org.keycloak > keycloak-spring-security-adapter > 4.8.3.Final
