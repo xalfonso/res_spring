@@ -85,8 +85,6 @@
         <intercept-url pattern="/**" access="authenticated"/>
         <csrf disabled="true"/>
 
-        <form-login authentication-success-handler-ref="restAuthenticationSuccessHandler"
-                    authentication-failure-handler-ref="restAuthenticationFailureHandler"/>
         <access-denied-handler ref="restAccessDeniedHandler"/>
     </http>
 
