@@ -76,6 +76,44 @@
             <version>1.18.6</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>5.0.11.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>5.0.11.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.keycloak</groupId>
+            <artifactId>keycloak-spring-security-adapter</artifactId>
+            <version>4.8.3.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>ec.com.kruger</groupId>
+            <artifactId>fwk-utilitario-security-sso-spring-security</artifactId>
+            <version>1.1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+        </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>nexusKruger</id>
+            <name>nexusKruger</name>
+            <url>http://svr-kruger1:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <repository>
+            <id>nexusKruger1</id>
+            <name>nexusKruger1</name>
+            <url>http://svr-kruger1:8081/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
 
 </project>
