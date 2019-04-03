@@ -139,3 +139,15 @@ Projects
     org.springframework.security > spring-security-web > 5.0.11;
     org.springframework.security > spring-security-config > 5.0.11;
     org.keycloak > keycloak-spring-security-adapter > 4.8.3.Final
+19. spring-persefone
+    1. Tips: Web Aplication (JSF+Primefaces) with Spring Security and KeyCloak. This project do not have dependency with spring framework
+    2. Main Dependencies
+    org.springframework > spring-webmv > 5.0.12.RELEASE;
+    javax.servlet > javax.servlet-api > 4.0.1;
+    com.fasterxml.jackson.core > jackson-databind > 2.9.6;
+    org.springframework.security > spring-security-web > 5.0.11;
+    org.springframework.security > spring-security-config > 5.0.11;
+    org.keycloak > keycloak-spring-security-adapter > 4.8.3.Final
+    com.sun.faces > jsf-api > 2.1.27
+    javax.el > javax.el-api > 3.0.0
+    org.primefaces > primefaces > 6.2
