@@ -8,6 +8,7 @@ public class MainClass {
 
     public static void main(String[] args) throws IOException {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        //context.getDefaultListableBeanFactory().setAutowireCandidateResolver(new ContextAnnotationAutowireCandidateResolverEduardo());
         context.register(BeansConfig.class);
         context.refresh();
         IBean2 bean2 = context.getBean("bean2", Bean2.class);

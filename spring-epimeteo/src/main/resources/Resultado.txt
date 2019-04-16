@@ -1,3 +1,5 @@
 Con JdkProxy: 57, 59, 60, 57, 58, 56, 55, 57, 59, 55, 56 = 57.18
 Con CGLIB: 65, 60, 65, 88, 82, 62, 61, 64, 66, 68, 62 = 67.54
-Optimization Remove Proxy First Time: 15, 32, 24, 15, 15, 10, 18, 15, 16, 16, 15 = 17.33
+Con CGLIB con frozen: 63, 81, 62, 78, 58, 77, 78, 63, 73, 63, 78 = 70.36
+Con CGLIB con frozen and Optimize: 63, 62, 63, 63, 63, 63, 62, 64, 63, 78,  78
+Optimization Remove Prozy First Time: 15, 32, 24, 15, 15, 10, 18, 15, 16, 16, 15 = 17.33
