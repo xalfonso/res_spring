@@ -151,3 +151,5 @@ Projects
     com.sun.faces > jsf-api > 2.1.27
     javax.el > javax.el-api > 3.0.0
     org.primefaces > primefaces > 6.2
+ 20. spring-metis
+    1. Tips: Web Aplication WebServices with Spring Security and Spring Session in Memory. 
