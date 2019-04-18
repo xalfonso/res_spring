@@ -18,5 +18,7 @@ public class MainClass {
         }
         long end = System.currentTimeMillis();
         System.out.println("Elapsed Time: " + (end - init));
+
+        int a = System.in.read();
     }
 }
