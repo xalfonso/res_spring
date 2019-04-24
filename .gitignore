@@ -16,5 +16,6 @@ SpringUrano/.idea/*
 spring-atenea/.idea/*
 spring-persefone/.idea/*
 spring-metis/.idea/*
+spring-epimeteo/.idea/*
 .gradle
 *.iml
