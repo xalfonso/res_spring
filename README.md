@@ -152,4 +152,6 @@ Projects
     javax.el > javax.el-api > 3.0.0
     org.primefaces > primefaces > 6.2
  20. spring-metis
-    1. Tips: Web Aplication WebServices with Spring Security and Spring Session in Memory. 
+    1. Tips: Web Aplication WebServices with Spring Security and Spring Session in Memory.
+ 21. spring-eos
+    1. Tips: Example of exclude beans of spring context. Use of @ComponentScan(excludeFilters = ...
