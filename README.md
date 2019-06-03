@@ -131,7 +131,7 @@ Projects
 17. spring-apolo
     1. Tips: Project for contains static file: css and js and be include for other project. This project do not have dependency with spring framework
 18. spring-atenea
-    1. Tips: Rest Aplication with Spring Security and KeyCloak. This project do not have dependency with spring framework
+    1. Tips: Rest Aplication with Spring Security and KeyCloak.
     2. Main Dependencies
     org.springframework > spring-webmv > 5.0.12.RELEASE;
     javax.servlet > javax.servlet-api > 4.0.1;
@@ -140,7 +140,7 @@ Projects
     org.springframework.security > spring-security-config > 5.0.11;
     org.keycloak > keycloak-spring-security-adapter > 4.8.3.Final
 19. spring-persefone
-    1. Tips: Web Aplication (JSF+Primefaces) with Spring Security and KeyCloak. This project do not have dependency with spring framework
+    1. Tips: Web Aplication (JSF+Primefaces) with Spring Security and KeyCloak.
     2. Main Dependencies
     org.springframework > spring-webmv > 5.0.12.RELEASE;
     javax.servlet > javax.servlet-api > 4.0.1;
