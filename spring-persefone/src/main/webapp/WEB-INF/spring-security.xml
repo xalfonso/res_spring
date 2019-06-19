@@ -2,20 +2,30 @@
              xmlns:beans="http://www.springframework.org/schema/beans"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xmlns:context="http://www.springframework.org/schema/context"
+             xmlns:mvc="http://www.springframework.org/schema/mvc"
              xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/security
-		http://www.springframework.org/schema/security/spring-security.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+		http://www.springframework.org/schema/security/spring-security.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 
-    <beans:bean name="restSecurityKeyCloakConfig" class="ec.com.kruger.security.sso.springsecurity.config.WebSecurityKeyCloakConfig"/>
+    <context:component-scan base-package="eas.com" />
+    <beans:bean name="kSecurityContextRepository" class="eas.com.web.managed.FactoryTemp" factory-method="buildObject" />
+
+    <mvc:annotation-driven/>
+
+
+    <beans:bean name="restSecurityKeyCloakConfig"
+                class="ec.com.kruger.security.sso.springsecurity.config.WebSecurityKeyCloakConfig"/>
 
     <beans:bean id="adapterDeploymentContext"
                 class="org.keycloak.adapters.springsecurity.AdapterDeploymentContextFactoryBean">
         <beans:constructor-arg value="/WEB-INF/keycloak.json"/>
     </beans:bean>
 
-    <http auto-config="false" entry-point-ref="keycloakAuthenticationEntryPoint">
+
+    <http auto-config="false" entry-point-ref="keycloakAuthenticationEntryPoint"
+          security-context-repository-ref="kSecurityContextRepository">
         <custom-filter ref="keycloakPreAuthActionsFilter" before="LOGOUT_FILTER"/>
         <custom-filter ref="logoutFilter" position="LOGOUT_FILTER"/>
         <custom-filter ref="keycloakAuthenticationProcessingFilter" before="FORM_LOGIN_FILTER"/>
@@ -26,6 +36,7 @@
         <intercept-url pattern="/other1.xhtml" access="hasRole('ROLE_OFFLINE_ACCESS1')"/>
         <intercept-url pattern="/**" access="authenticated"/>
         <csrf disabled="true"/>
+
     </http>
 
     <authentication-manager alias="authenticationManager">

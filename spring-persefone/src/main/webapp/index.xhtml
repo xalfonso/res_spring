@@ -16,6 +16,8 @@
             <h:message for="firstName" style="color:red;"/>
             <h:commandButton value="#{msg['label.saveButton']}" action="#{registration.createNewUser}"
                              process="@this"/>
+            <h:commandButton value="Show Session" action="#{registration.showSession}"
+                             process="@this"/>
 
             <h:outputText value="#{registration.operationMessage}" style="color:green;"/>
 
