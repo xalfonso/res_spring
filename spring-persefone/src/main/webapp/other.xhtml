@@ -7,8 +7,9 @@
     <title><h:outputText value="#{msg['message.welcome']}"/></title>
 </h:head>
 <h:body>
-   Other file...
+    Other file...
 
+    <h:outputLabel value="${securityKeyCloakManagedBean.refreshToken}"></h:outputLabel>
     <a href="${request.contextPath}/sso/logout">Cerrar Session</a>
 </h:body>
 

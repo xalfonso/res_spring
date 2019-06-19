@@ -9,9 +9,12 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
+/**
+ * Example for getting the refresh token
+ */
 @Getter
 @Setter
-@ManagedBean
+@ManagedBean(name = "securityKeyCloakManagedBean")
 @SessionScoped
 public class SecurityKeyCloakManagedBean {
 
