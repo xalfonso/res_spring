@@ -7,28 +7,6 @@
 		http://www.springframework.org/schema/security
 		http://www.springframework.org/schema/security/spring-security.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:component-scan base-package="eas.com.web.security"/>
 
-    <beans:bean name="restSecurityKeyCloakConfig" class="ec.com.kruger.security.sso.springsecurity.config.WebSecurityKeyCloakConfig"/>
-
-    <beans:bean id="adapterDeploymentContext"
-                class="org.keycloak.adapters.springsecurity.AdapterDeploymentContextFactoryBean">
-        <beans:constructor-arg value="/WEB-INF/keycloak.json"/>
-    </beans:bean>
-
-    <http auto-config="false" entry-point-ref="keycloakAuthenticationEntryPoint">
-        <custom-filter ref="keycloakPreAuthActionsFilter" before="LOGOUT_FILTER"/>
-        <custom-filter ref="logoutFilter" position="LOGOUT_FILTER"/>
-        <custom-filter ref="keycloakAuthenticationProcessingFilter" before="FORM_LOGIN_FILTER"/>
-
-
-        <intercept-url pattern="/index.xhtml" access="permitAll()"/>
-        <intercept-url pattern="/other.xhtml" access="hasRole('ROLE_OFFLINE_ACCESS')"/>
-        <intercept-url pattern="/other1.xhtml" access="hasRole('ROLE_OFFLINE_ACCESS1')"/>
-        <intercept-url pattern="/**" access="authenticated"/>
-        <csrf disabled="true"/>
-    </http>
-
-    <authentication-manager alias="authenticationManager">
-        <authentication-provider ref="keycloakAuthenticationProvider"/>
-    </authentication-manager>
 </beans:beans>
