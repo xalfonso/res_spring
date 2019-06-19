@@ -15,8 +15,6 @@
         <beans:constructor-arg value="/WEB-INF/keycloak.json"/>
     </beans:bean>
 
-    <!-- END KeyCloak -->
-
     <http auto-config="false" entry-point-ref="keycloakAuthenticationEntryPoint">
         <custom-filter ref="keycloakPreAuthActionsFilter" before="LOGOUT_FILTER"/>
         <custom-filter ref="logoutFilter" position="LOGOUT_FILTER"/>
