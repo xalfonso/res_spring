@@ -10,7 +10,9 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 /**
- * Example for getting the refresh token
+ * Managed bean as example for getting the refresh token of keycloak.
+ *
+ * @author Eduardo Alfonso Sanchez
  */
 @Getter
 @Setter
@@ -20,6 +22,9 @@ public class SecurityKeyCloakManagedBean {
 
     private String refreshToken;
 
+    /**
+     * Constructor.
+     */
     public SecurityKeyCloakManagedBean() {
         if (SecurityContextHolder.getContext().getAuthentication() != null) {
             if (SecurityContextHolder.getContext().getAuthentication().getPrincipal() instanceof KeycloakPrincipal) {

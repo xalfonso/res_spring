@@ -9,6 +9,11 @@ import javax.faces.bean.ViewScoped;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Some dummy bean.
+ *
+ * @author Eduardo Alfonso Sanchez
+ */
 @ManagedBean(name = "registration")
 @ViewScoped
 @Getter
@@ -21,11 +26,17 @@ public class RegistrationBean {
 
     private List<String> listUser;
 
+    /**
+     * Constructor.
+     */
     public RegistrationBean() {
         listUser = new ArrayList<>();
         this.userInfo = SecurityContextHolder.getContext().getAuthentication().toString();
     }
 
+    /**
+     * Create new user.
+     */
     public void createNewUser() {
         System.out.println("Call to createNewUser: " + this.userName);
         listUser.add(this.userInfo);
