@@ -17,6 +17,8 @@
             <h:commandButton value="#{msg['label.saveButton']}" action="#{registration.createNewUser}"
                              process="@this"/>
 
+            <h:commandButton value="Test Session" action="#{registration.testSession}" process="@this"/>
+
             <h:outputText value="#{registration.operationMessage}" style="color:green;"/>
 
             <h:dataTable value="#{registration.listUser}" var="user">
