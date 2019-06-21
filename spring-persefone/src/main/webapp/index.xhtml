@@ -7,30 +7,44 @@
     <title><h:outputText value="#{msg['message.welcome']}"/></title>
 </h:head>
 <h:body>
+    Session ID:
+    <h:outputLabel value="${securityKeyCloakManagedBean.sessionId}"/>
+    <br/>
     <h:form>
         <h:panelGrid id="theGrid" columns="3">
-            <h:outputText value="Username"/>
-            <h:inputText id="firstName" binding="#{userName}" required="true"
+            <h:outputText value="Attribute Name"/>
+            <h:inputText id="attributeNameInput" required="true"
                          requiredMessage="#{msg['message.valueRequired']}"
-                         value="#{registration.userName}"/>
-            <h:message for="firstName" style="color:red;"/>
-            <h:commandButton value="#{msg['label.saveButton']}" action="#{registration.createNewUser}"
+                         value="#{attributeInsertion.attributeName}"/>
+            <h:message for="attributeNameInput" style="color:red;"/>
+
+            <h:outputText value="Attribute Value"/>
+            <h:inputText id="attributeValueInput" required="true"
+                         requiredMessage="#{msg['message.valueRequired']}"
+                         value="#{attributeInsertion.attributeValue}"/>
+            <h:message for="attributeNameInput" style="color:red;"/>
+
+            <h:commandButton value="#{msg['label.saveButton']}" action="#{attributeInsertion.addAttributeToSession}"
                              process="@this"/>
 
-            <h:commandButton value="Test Session" action="#{registration.testSession}" process="@this"/>
-
-            <h:outputText value="#{registration.operationMessage}" style="color:green;"/>
-
-            <h:dataTable value="#{registration.listUser}" var="user">
-                <h:column>
-                    <f:facet name="header">Name</f:facet>
-                    #{user}
-                </h:column>
-            </h:dataTable>
         </h:panelGrid>
 
-        Session ID:
-        <h:outputLabel value="${securityKeyCloakManagedBean.sessionId}"/>
+        <h:dataTable border="1" value="#{attributeInsertion.sessionAttributes.entrySet().toArray()}" var="map">
+            <h:column id="column1">
+                <f:facet name="header">
+                    <h:outputText value="Attribute Name"></h:outputText>
+                </f:facet>
+                <h:outputText value="#{map.key}"></h:outputText>
+            </h:column>
+            <h:column id="column2">
+                <f:facet name="header">
+                    <h:outputText value="Attribute Value"></h:outputText>
+                </f:facet>
+                <h:outputText value="#{map.value}"></h:outputText>
+            </h:column>
+        </h:dataTable>
+
+
     </h:form>
 </h:body>
 
