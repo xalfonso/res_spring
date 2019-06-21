@@ -10,9 +10,6 @@
 
     <context:component-scan base-package="eas.com"/>
     <mvc:annotation-driven/>
-    <!--<context:annotation-config/>
-
-    <beans:bean class="org.springframework.session.config.annotation.web.http.SpringHttpSessionConfiguration"/>-->
 
     <beans:bean name="restSecurityKeyCloakConfig"
                 class="ec.com.kruger.security.sso.springsecurity.config.WebSecurityKeyCloakConfig"/>
