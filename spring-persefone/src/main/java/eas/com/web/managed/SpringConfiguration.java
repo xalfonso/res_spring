@@ -15,6 +15,7 @@ public class SpringConfiguration {
 
     public static Map<String, Session> allSession = new ConcurrentHashMap<>();
 
+
     /**
      * Bean for activate the Http Session in Memory.
      *
@@ -25,4 +26,5 @@ public class SpringConfiguration {
     public MapSessionRepository sessionRepository() {
         return new MapSessionRepository(allSession);
     }
+
 }
