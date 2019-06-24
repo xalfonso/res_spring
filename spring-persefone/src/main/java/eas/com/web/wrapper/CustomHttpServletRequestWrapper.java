@@ -17,7 +17,7 @@ public class CustomHttpServletRequestWrapper extends HttpServletRequestWrapper {
         HttpSession session = super.getSession();
         if (session != null) {
             log.info("Intercepting CustomHttpServletRequestWrapper.getSession() Session ID: " + session.getId());
-            log.info("Intercepting CustomHttpServletRequestWrapper.getSession(). Session IsNew: " + getSession().isNew());
+            log.info("Intercepting CustomHttpServletRequestWrapper.getSession(). Session IsNew: " + session.isNew());
         }
         return session;
     }
@@ -27,7 +27,7 @@ public class CustomHttpServletRequestWrapper extends HttpServletRequestWrapper {
         HttpSession session = super.getSession(create);
         if (session != null) {
             log.info("Intercepting CustomHttpServletRequestWrapper.getSession(boolean). Session ID: " + session.getId());
-            log.info("Intercepting CustomHttpServletRequestWrapper.getSession(boolean). Session IsNew: " + getSession().isNew());
+            log.info("Intercepting CustomHttpServletRequestWrapper.getSession(boolean). Session IsNew: " + session.isNew());
         }
         return session;
     }
