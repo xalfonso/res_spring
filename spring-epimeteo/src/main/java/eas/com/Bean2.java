@@ -36,14 +36,15 @@ public class Bean2 implements IBean2 {
     }
 
     public IBean3 getBean3() {
-        if(AopUtils.isAopProxy(bean3) && bean3 instanceof Advised) {
+        if (AopUtils.isAopProxy(bean3) && bean3 instanceof Advised) {
             Object target = null;
             try {
-                target = ((Advised)bean3).getTargetSource().getTarget();
+                target = ((Advised) bean3).getTargetSource().getTarget();
+                bean3 = (Bean3) target;
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            bean3 = (Bean3) target;
+
         }
         return bean3;
     }
