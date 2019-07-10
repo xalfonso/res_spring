@@ -155,3 +155,4 @@ Projects
     1. Tips: Web Aplication WebServices with Spring Security and Spring Session in Memory.
  21. spring-eos
     1. Tips: Example of exclude beans of spring context. Use of @ComponentScan(excludeFilters = ...
+ 22. spring-epimeteo: Performance Test of Spring Proxy and use of Lazy
