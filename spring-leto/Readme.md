@@ -1,0 +1,1 @@
+Example of Upload File in Spring Rest Controller
