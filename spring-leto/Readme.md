@@ -1,1 +1,1 @@
-Example of Upload File in Spring Rest Controller
+Example of Upload File in Spring Rest Controller. Application made with web.xml
