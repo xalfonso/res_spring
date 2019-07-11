@@ -1,0 +1,27 @@
+POST /spring-leto-1.0.0-SNAPSHOT/multipart/fileWithDataJson HTTP/1.1
+Host: localhost:8080
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+User-Agent: PostmanRuntime/7.15.2
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: a11b98da-b972-4fb7-a6aa-64215f775c9f,25686498-3c9b-43c3-8984-a195e4efd4f5
+Host: localhost:8080
+Cookie: JSESSIONID=543CB1B7443CD7B7FFD1E96FF535169C.pc-smxk170; JSESSIONID=543CB1B7443CD7B7FFD1E96FF535169C
+Accept-Encoding: gzip, deflate
+Content-Length: 124792
+Connection: keep-alive
+cache-control: no-cache
+
+
+Content-Disposition: form-data; name="myFile"; filename="/C:/Users/ealfonso/Desktop/Compra.pdf
+
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW--,
+Content-Disposition: form-data; name="myFile"; filename="/C:/Users/ealfonso/Desktop/Compra.pdf
+
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+Content-Disposition: form-data; name="someJson"
+
+{"message": "Eduardo Hello"}
+------WebKitFormBoundary7MA4YWxkTrZu0gW--

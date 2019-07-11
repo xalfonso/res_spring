@@ -1,5 +1,6 @@
 package eas.com.web;
 
+import eas.com.vo.DummyRequestVO;
 import eas.com.vo.DummyResponseVO;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +21,19 @@ public class MultipartController {
 
     @PostMapping(value = "/fileWithData", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<DummyResponseVO> fileWithData(@RequestParam("myFile") MultipartFile myFile, @RequestParam("data") String someData) {
+        System.out.println("Call eas.com.web.MultipartController.simpleFile");
+        return ResponseEntity.ok(new DummyResponseVO("Work Well!!!"));
+    }
+
+
+    /**
+     * Example of cliente request in: res_spring\spring-leto\src\main\resources\client-fileWithDataJson.txt
+     * @param myFile
+     * @param someData
+     * @return
+     */
+    @PostMapping(value = "/fileWithDataJson", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<DummyResponseVO> fileWithDataJson(@RequestPart("myFile") MultipartFile myFile, @RequestPart("someJson") DummyRequestVO someData) {
         System.out.println("Call eas.com.web.MultipartController.simpleFile");
         return ResponseEntity.ok(new DummyResponseVO("Work Well!!!"));
     }
