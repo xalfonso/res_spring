@@ -1,5 +1,7 @@
 package eas.com;
 
+import eas.com.proxy.ProxyUtil;
+import lombok.experimental.ExtensionMethod;
 import org.springframework.aop.framework.Advised;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,17 +10,21 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
+import static eas.com.proxy.ProxyUtil.unProxy;
+
+@ExtensionMethod(value = ProxyUtil.class)
 @Component
 public class Bean2 implements IBean2 {
 
     private String name = "Load eas.com.Bean2";
 
-    @Lazy
+    //@Lazy
     @Autowired
-    private Bean3 bean3;
+    private IBean3 bean3;
 
     @PostConstruct
     public void init() {
+
         System.out.println("Load eas.com.Bean2");
     }
 
@@ -36,7 +42,7 @@ public class Bean2 implements IBean2 {
     }
 
     public IBean3 getBean3() {
-        if (AopUtils.isAopProxy(bean3) && bean3 instanceof Advised) {
+        /*if (AopUtils.isAopProxy(bean3) && bean3 instanceof Advised) {
             Object target = null;
             try {
                 target = ((Advised) bean3).getTargetSource().getTarget();
@@ -45,7 +51,11 @@ public class Bean2 implements IBean2 {
                 e.printStackTrace();
             }
 
-        }
+        }*/
         return bean3;
+
+
+
+        //return unProxy(bean3);
     }
 }

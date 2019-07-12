@@ -19,18 +19,18 @@ public class MainClass {
         context.refresh();
         IBean2 bean2 = context.getBean("bean2", Bean2.class);
         long init = System.currentTimeMillis();
-        /*for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 1000000; i++) {
             bean2.getBean3().doSomeThing();
-        }*/
+        }
 
-        bean2.getBean3().doSomeThing();
+        /*bean2.getBean3().doSomeThing();
         System.out.println("Segunda Vez");
-        bean2.getBean3().doSomeThing();
+        bean2.getBean3().doSomeThing();*/
 
 
         long end = System.currentTimeMillis();
         System.out.println("Elapsed Time: " + (end - init));
 
-        int a = System.in.read();
+        //int a = System.in.read();
     }
 }

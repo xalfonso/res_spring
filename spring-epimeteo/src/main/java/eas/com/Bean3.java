@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 @Component
-public class Bean3 extends CustomCglibAopProxy implements IBean3 {
+public class Bean3 implements IBean3 {
 
     private String name = "Load eas.com.Bean3";
 
