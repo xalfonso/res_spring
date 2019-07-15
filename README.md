@@ -156,3 +156,10 @@ Projects
  21. spring-eos
     1. Tips: Example of exclude beans of spring context. Use of @ComponentScan(excludeFilters = ...
  22. spring-epimeteo: Performance Test of Spring Proxy and use of Lazy
+ 23. spring-leto
+ <ul>
+	<li>Gradle Application/li>
+	<li>Web Applicaction With Spring 5</li>
+	<li>Example of Upload File in Spring Rest Controller. Application made with web.xml</li>
+	<li>Example of @RequestPart for send json and file together</li>
+</ul>
