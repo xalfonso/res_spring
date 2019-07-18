@@ -10,6 +10,19 @@
 	http://www.springframework.org/schema/security
 	http://www.springframework.org/schema/security/spring-security.xsd">
 
+	<context:component-scan base-package="eas.com.security"/>
 
+	<security:http entry-point-ref="restNotAuthenticateHandler" authentication-manager-ref="restAuthenticationManager">
+		<security:access-denied-handler ref="restAccessDeniedHandler"/>
+		<security:form-login authentication-success-handler-ref="restAuthenticationSuccessHandler"
+							 authentication-failure-handler-ref="restAuthenticationFailureHandler"/>
+		<security:intercept-url pattern="/**" access="hasRole('ROLE_USER')"/>
+		<security:csrf disabled="true"/>
+	</security:http>
+
+
+	<security:authentication-manager alias="restAuthenticationManager">
+		<security:authentication-provider ref="restAuthenticationProvider"/>
+	</security:authentication-manager>
 
 </beans>
