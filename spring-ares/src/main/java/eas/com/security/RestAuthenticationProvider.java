@@ -1,5 +1,6 @@
 package eas.com.security;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -10,6 +11,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Component;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Collections;
 import java.util.List;
 
@@ -21,12 +23,18 @@ public class RestAuthenticationProvider implements AuthenticationProvider {
 
     private static List<GrantedAuthority> defaultAuthorities = Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"));
 
+    @Autowired
+    private HttpServletRequest httpServletRequest;
+
 
     /**
      * {@inheritDoc}
      */
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+        httpServletRequest.getContextPath();
+        httpServletRequest.getHeaderNames();
+
         System.out.println("username: " + authentication.getName());
         System.out.println("password: " + authentication.getCredentials().toString());
 
