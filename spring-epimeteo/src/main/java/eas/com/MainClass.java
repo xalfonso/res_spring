@@ -19,7 +19,7 @@ public class MainClass {
         context.refresh();
         IBean2 bean2 = context.getBean("bean2", Bean2.class);
         long init = System.currentTimeMillis();
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 10000; i++) {
             bean2.getBean3().doSomeThing();
         }
 
