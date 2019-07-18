@@ -163,3 +163,10 @@ Projects
 	<li>Example of Upload File in Spring Rest Controller. Application made with web.xml</li>
 	<li>Example of @RequestPart for send json and file together</li>
 </ul>
+24. spring-ares
+<ul>
+  <li>Gradle Application</li>
+  <li>Spring Application</li>
+  <li>Web Rest Service Applicaction</li>  
+  <li>Spring Security Application Configured in XML</li>  
+</ul>
