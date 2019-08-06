@@ -162,6 +162,7 @@ Projects
 	<li>Web Applicaction With Spring 5</li>
 	<li>Example of Upload File in Spring Rest Controller. Application made with web.xml</li>
 	<li>Example of @RequestPart for send json and file together</li>
+	<li>Example of Test that consume the web service and send File and Json</li>
 </ul>
 24. spring-ares
 <ul>
