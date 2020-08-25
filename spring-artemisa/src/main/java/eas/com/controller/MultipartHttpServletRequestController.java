@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import java.io.IOException;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -41,7 +43,7 @@ public class MultipartHttpServletRequestController {
     }
 
     @PostMapping(value = "joined", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<DummyResponseVO> joined(MultipartHttpServletRequest input) {
+    public ResponseEntity<DummyResponseVO> joined(MultipartHttpServletRequest input) throws IOException {
         System.out.println("Call eas.com.controller.MultipartHttpServletRequestController.joined");
 
         Collection<List<MultipartFile>> listaFiles = input.getMultiFileMap().values();
@@ -50,6 +52,7 @@ public class MultipartHttpServletRequestController {
                 System.out.println("File name: " + file.getName());
                 System.out.println("File type: " + file.getContentType());
                 System.out.println("File Size: " + file.getSize());
+                System.out.println("File Byte: " + Arrays.toString(file.getBytes()));
             }
         }
 
