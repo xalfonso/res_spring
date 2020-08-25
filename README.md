@@ -179,3 +179,12 @@ Projects
   <li>Spring Security Application Configured in XML</li>
   <li>Custom Filter for get a Token of Header and triger the Authentication Manager if is neccesary</li>  
 </ul>
+
+26. spring-artemisa
+ <ul>
+	<li>Gradle Application</li>
+	<li>Web Applicaction With Spring 5. Spring Boot</li>
+	<li>Example of Upload File in Spring Rest Controller</li>
+	<li>Example of MultipartFile, MultipartHttpServletRequest</li>
+	<li>Example of Test that consume the web service and send File and Json</li>
+</ul>
