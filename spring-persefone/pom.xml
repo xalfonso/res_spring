@@ -26,7 +26,7 @@
 
 
     <properties>
-        <spring.version>5.0.12.RELEASE</spring.version>
+        <spring.version>5.3.18</spring.version>
         <com.sun.faces.version>2.1.27</com.sun.faces.version>
         <javax.el.version>3.0.0</javax.el.version>
         <jstl.version>1.2</jstl.version>
